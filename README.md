@@ -24,8 +24,12 @@ ml_grpc_service/
 │   └── client.py             # Тестовый клиент
 ├── models/
 │   └── model.pkl             # Обученная модель
+├── screenshots/              # Скриншоты для документации
+│   ├── docker_run.png
+│   └── test_health_preditc.png
 ├── model_pb2.py              # Сгенерированный код (messages)
 ├── model_pb2_grpc.py         # Сгенерированный код (services)
+├── train_model.py            # Скрипт для обучения модели
 ├── requirements.txt          # Зависимости Python
 ├── Dockerfile                # Конфигурация Docker-контейнера
 ├── .dockerignore             # Исключения для Docker
