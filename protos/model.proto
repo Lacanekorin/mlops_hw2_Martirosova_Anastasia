@@ -1,0 +1,36 @@
+syntax = "proto3";
+
+package mlservice.v1;
+
+// gRPC-сервис с двумя методами: Health и Predict.
+service PredictionService {
+  rpc Health(HealthRequest) returns (HealthResponse);
+  rpc Predict(PredictRequest) returns (PredictResponse);
+}
+
+// Пустой запрос для /Health.
+message HealthRequest {}
+
+// Ответ для /Health.
+message HealthResponse {
+  string status = 1;         // "ok", если всё норм
+  string model_version = 2;  // версия модели, например "v1.0.0"
+}
+
+// Один признак: имя + значение.
+message Feature {
+  string name = 1;
+  double value = 2;
+}
+
+// Запрос на предсказание: список признаков.
+message PredictRequest {
+  repeated Feature features = 1;
+}
+
+// Ответ /Predict.
+message PredictResponse {
+  string prediction = 1;     // предсказанный класс, строкой "0"/"1"/"2"
+  double confidence = 2;     // уверенность (макс. вероятность)
+  string model_version = 3;  // версия модели
+}

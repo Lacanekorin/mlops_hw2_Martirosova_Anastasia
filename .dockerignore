@@ -1,0 +1,16 @@
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.venv/
+.idea/
+.git/
+.gitignore
+.dockerignore
+
+*.md
+
+Dockerfile
+train_model.py
+client/
+*.png
