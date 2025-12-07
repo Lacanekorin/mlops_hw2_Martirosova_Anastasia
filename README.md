@@ -103,7 +103,7 @@ docker run -p 50051:50051 grpc-ml-service
 grpcurl -plaintext localhost:50051 mlservice.v1.PredictionService.Health 
 ```
 
-## **4. Скриншоты
+## **4. Скриншоты**
 
 ### Запуск сервера в Docker
 
