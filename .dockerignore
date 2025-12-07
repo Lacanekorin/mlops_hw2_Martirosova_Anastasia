@@ -13,4 +13,5 @@ __pycache__/
 Dockerfile
 train_model.py
 client/
+screenshots/
 *.png

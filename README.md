@@ -110,7 +110,7 @@ grpcurl -plaintext localhost:50051 mlservice.v1.PredictionService.Health
 ```bash
 docker run -p 50051:50051 grpc-ml-service
 ```
-![docker_run](docker_run.png)
+![docker_run](screenshots/docker_run.png)
 
 ### Тестирование через grpcurl
 
@@ -123,5 +123,5 @@ grpcurl -plaintext localhost:50051 mlservice.v1.PredictionService.Health
 ```bash
 python -m client.client
 ```
-![test_health_preditc](test_health_preditc.png)
+![test_health_preditc](screenshots/test_health_preditc.png)
 
